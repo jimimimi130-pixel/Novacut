@@ -1,16 +1,41 @@
 package com.novacut.app
 
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import android.widget.VideoView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    // شاشة NOVA CUT الرئيسية
-    // 1. معاينة الفيديو فوق
-    // 2. Timeline جوة
-    // 3. شريط التأثيرات 100+ تأثير
+
+    private lateinit var videoView: VideoView
+    private lateinit var pickText: TextView
+
+    private val pickVideo = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        if (uri != null) {
+            pickText.visibility = View.GONE
+            videoView.visibility = View.VISIBLE
+            videoView.setVideoURI(uri)
+            videoView.start()
+            Toast.makeText(this, "تم اختيار الفيديو ✅", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // هنا راح نربط محرك التأثيرات NovaEngine
+
+        videoView = findViewById(R.id.videoView)
+        pickText = findViewById(R.id.pickVideoText)
+
+        pickText.setOnClickListener {
+            pickVideo.launch("video/*")
+        }
+        videoView.setOnClickListener {
+            pickVideo.launch("video/*")
+        }
     }
 }
