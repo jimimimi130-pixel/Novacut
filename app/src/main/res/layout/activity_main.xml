@@ -11,87 +11,28 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="✦ NOVA CUT"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#FF7A00" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="  PRO"
-            android:textSize="12sp"
-            android:textColor="#A855F7"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="تصدير 4K ↗"
-            android:textColor="#FFFFFF"
-            android:background="#FF7A00"
-            android:padding="8dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✦ NOVA CUT" android:textSize="20sp" android:textStyle="bold" android:textColor="#FF7A00" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  PRO" android:textSize="12sp" android:textColor="#A855F7" android:textStyle="bold" />
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+        <TextView android:id="@+id/btnExport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تصدير 4K ↗" android:textColor="#FFFFFF" android:background="#FF7A00" android:padding="8dp" android:clickable="true" android:focusable="true" />
     </LinearLayout>
 
-<FrameLayout
-    android:id="@+id/videoPreview"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:background="#000000">
-
-    <VideoView
-        android:id="@+id/videoView"
+    <FrameLayout
+        android:id="@+id/videoPreview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000">
+        <VideoView android:id="@+id/videoView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <View android:id="@+id/effectOverlay" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#00000000" />
+        <TextView android:id="@+id/overlayText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="" android:textColor="#FFFFFF" android:textSize="28sp" android:textStyle="bold" android:visibility="gone" />
+        <TextView android:id="@+id/pickVideoText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🎬 + اضغط لاختيار فيديو" android:textColor="#FFFFFF" android:textSize="18sp" android:gravity="center" android:clickable="true" android:focusable="true" />
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/pickVideoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="🎬 + اضغط لاختيار فيديو"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true" />
-
-</FrameLayout>
-  
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#15151F">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TIMELINE  •  فيديو  •  صوت  •  نص"
-                android:textColor="#888888"
-                android:textSize="11sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="6dp">
-
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="90dp" android:background="#15151F">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TIMELINE  •  فيديو  •  صوت  •  نص" android:textColor="#888888" android:textSize="11sp" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="50dp" android:orientation="horizontal" android:layout_marginTop="6dp">
                 <View android:layout_width="120dp" android:layout_height="match_parent" android:background="#FF7A00" />
                 <View android:layout_width="8dp" android:layout_height="match_parent" />
                 <View android:layout_width="120dp" android:layout_height="match_parent" android:background="#A855F7" />
@@ -101,48 +42,24 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="  ✨ تأثيرات NOVA - اسحب وشوف الكل"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
-        android:paddingBottom="6dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  ✨ تأثيرات NOVA - اسحب وشوف الكل" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:paddingTop="10dp" android:paddingBottom="6dp" />
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="6dp">
-
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="🔥\nNOVA" android:gravity="center" android:textColor="#FFF" android:background="#FF7A00" />
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="📺\nVHS" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" />
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="⚡\nGlitch" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" />
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="💜\nNeon" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" />
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="🌧️\nمطر" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" />
-            <TextView android:layout_width="70dp" android:layout_height="match_parent" android:text="🔥\nنار" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" />
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="70dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:padding="6dp">
+            <TextView android:id="@+id/effectNova" android:layout_width="70dp" android:layout_height="match_parent" android:text="🔥\nNOVA" android:gravity="center" android:textColor="#FFF" android:background="#FF7A00" android:clickable="true" />
+            <TextView android:id="@+id/effectVHS" android:layout_width="70dp" android:layout_height="match_parent" android:text="📺\nVHS" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" android:clickable="true" />
+            <TextView android:id="@+id/effectGlitch" android:layout_width="70dp" android:layout_height="match_parent" android:text="⚡\nGlitch" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" android:clickable="true" />
+            <TextView android:id="@+id/effectNeon" android:layout_width="70dp" android:layout_height="match_parent" android:text="💜\nNeon" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" android:clickable="true" />
+            <TextView android:id="@+id/effectRain" android:layout_width="70dp" android:layout_height="match_parent" android:text="🌧️\nمطر" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" android:clickable="true" />
+            <TextView android:id="@+id/effectFire" android:layout_width="70dp" android:layout_height="match_parent" android:text="🔥\nنار" android:gravity="center" android:textColor="#FFF" android:layout_marginLeft="8dp" android:background="#333333" android:clickable="true" />
         </LinearLayout>
     </HorizontalScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:background="#15151F"
-        android:gravity="center">
-
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✂️\nقص" android:gravity="center" android:textColor="#FFF" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🔤\nنص" android:gravity="center" android:textColor="#FFF" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎵\nموسيقى" android:gravity="center" android:textColor="#FFF" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎨\nفلتر" android:gravity="center" android:textColor="#FFF" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⏩\nسرعة" android:gravity="center" android:textColor="#FFF" />
-
+    <LinearLayout android:layout_width="match_parent" android:layout_height="70dp" android:orientation="horizontal" android:background="#15151F" android:gravity="center">
+        <TextView android:id="@+id/btnTrim" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✂️\nقص" android:gravity="center" android:textColor="#FFF" android:clickable="true" />
+        <TextView android:id="@+id/btnText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🔤\nنص" android:gravity="center" android:textColor="#FFF" android:clickable="true" />
+        <TextView android:id="@+id/btnMusic" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎵\nموسيقى" android:gravity="center" android:textColor="#FFF" android:clickable="true" />
+        <TextView android:id="@+id/btnFilter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎨\nفلتر" android:gravity="center" android:textColor="#FFF" android:clickable="true" />
+        <TextView android:id="@+id/btnSpeed" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⏩\nسرعة" android:gravity="center" android:textColor="#FFF" android:clickable="true" />
     </LinearLayout>
-
 </LinearLayout>
