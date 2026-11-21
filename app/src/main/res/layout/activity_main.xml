@@ -43,28 +43,32 @@
             android:padding="8dp" />
     </LinearLayout>
 
-    <!-- ===== 2. معاينة الفيديو ===== -->
-    <FrameLayout
-        android:id="@+id/videoPreview"
+    <!-- ===== 2. معاينة الفيديو ===== 
+<FrameLayout
+    android:id="@+id/videoPreview"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="#000000">
+
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#000000">
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="🎬 اضغط + لاختيار فيديو\nوابدأ الابداع"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:gravity="center" />
+    <TextView
+        android:id="@+id/pickVideoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="🎬 + اضغط لاختيار فيديو"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
 
-        <!-- هنا راح يطلع الفيديو -->
-        <!-- تأثير NOVA CINEMA راح يشتغل هنا -->
-
-    </FrameLayout>
-
+</FrameLayout>
     <!-- ===== 3. Timeline - مثل برامج الكمبيوتر ===== -->
     <HorizontalScrollView
         android:layout_width="match_parent"
