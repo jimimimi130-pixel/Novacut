@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:background="#0A0A12">
 
-    <!-- ===== 1. الهيدر - اسم التطبيق ===== -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -43,7 +42,6 @@
             android:padding="8dp" />
     </LinearLayout>
 
-    <!-- ===== 2. معاينة الفيديو ===== 
 <FrameLayout
     android:id="@+id/videoPreview"
     android:layout_width="match_parent"
@@ -69,7 +67,7 @@
         android:focusable="true" />
 
 </FrameLayout>
-    <!-- ===== 3. Timeline - مثل برامج الكمبيوتر ===== -->
+  
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="90dp"
@@ -103,7 +101,6 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- ===== 4. شريط التأثيرات - 100+ تأثير ===== -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -133,7 +130,6 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- ===== 5. ازرار الادوات السفلية ===== -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
