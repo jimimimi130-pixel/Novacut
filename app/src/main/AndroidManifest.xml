@@ -9,7 +9,7 @@
         android:name=".NovaCutApp"
         android:label="NOVA CUT"
         android:theme="@style/Theme.NovaCut"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@android:drawable/sym_def_app_icon"
         <activity
             android:name=".MainActivity"
             android:exported="true"
